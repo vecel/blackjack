@@ -28,6 +28,7 @@ public abstract class AbstractPlayer {
 	}
 	
 	public int getHandPoints() {
+		// Counting aces strategy can be improved inside child classes !
 		int total = 0;
 		int aces = 0;
 		for (Card card : hand) {
@@ -47,6 +48,15 @@ public abstract class AbstractPlayer {
 		}
 		
 		return total;
+	}
+
+	/**
+	 * Prepare player to next round,
+	 * empty hand and set playing to true
+	 */
+	public void resetPlayer() {
+		hand.clear();
+		playing = true;
 	}
 	
 	@Override

@@ -36,8 +36,6 @@ public class Game {
 		while (playing) {
 			playing = false;
 			for (Player player : players) {
-				System.out.println(player);
-				
 				if (!player.isPlaying())
 					continue;
 				playing = true;
@@ -47,7 +45,11 @@ public class Game {
 		while (dealer.isPlaying()) {
 			dealer.play();			
 		}
+		
 		System.out.println(dealer);
+		for (Player player : players) {
+			System.out.println(player);
+		}
 	}
 
 	@Override
