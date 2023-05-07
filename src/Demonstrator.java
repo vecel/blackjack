@@ -1,6 +1,5 @@
 import pl.karandysm.blackjack.game.Game;
 import pl.karandysm.blackjack.players.CasualPlayerFactory;
-import pl.karandysm.blackjack.players.Player;
 
 public class Demonstrator {
 	
@@ -13,5 +12,7 @@ public class Demonstrator {
 		game.init();
 		
 		System.out.println(game);
+		
+		game.playRound();
 	}
 }

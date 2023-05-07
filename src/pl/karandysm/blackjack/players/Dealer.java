@@ -11,7 +11,7 @@ public class Dealer extends AbstractPlayer {
 
 	@Override
 	public void play() {
-		if (getHandPoints() < 16)
+		if (getHandPoints() <= 16)
 			hit();
 		else
 			stand();
@@ -26,7 +26,7 @@ public class Dealer extends AbstractPlayer {
 
 	@Override
 	public String toString() {
-		return super.toString();
+		return "Dealer " + super.toString();
 	}
 
 	

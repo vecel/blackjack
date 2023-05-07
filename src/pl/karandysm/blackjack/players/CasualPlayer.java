@@ -17,5 +17,10 @@ public class CasualPlayer extends Player {
 			stand();
 	}
 
+	@Override
+	public String toString() {
+		return "CasualPlayer " + super.toString();
+	}
+
 	
 }

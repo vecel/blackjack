@@ -8,6 +8,9 @@ import pl.karandysm.blackjack.deck.CardDrawable;
 
 public abstract class AbstractPlayer {
 	
+	private static int nextId = 0;
+	private int id = nextId++;
+	
 	private List<Card> hand = new ArrayList<>();
 	private CardDrawable deck;
 	private boolean playing = true;
@@ -48,7 +51,7 @@ public abstract class AbstractPlayer {
 	
 	@Override
 	public String toString() {
-		return "AbstractPlayer [hand=" + hand + ", playing=" + playing + "]";
+		return "[id=" + id + ", hand=" + hand + ", playing=" + playing + ", totalPoints=" + getHandPoints() + "]";
 	}
 
 	protected void hit(boolean visible) {

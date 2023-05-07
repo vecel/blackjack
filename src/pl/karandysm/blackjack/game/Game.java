@@ -30,6 +30,25 @@ public class Game {
 		for (Player player : players)
 			player.init();
 	}
+	
+	public void playRound() {
+		boolean playing = true;
+		while (playing) {
+			playing = false;
+			for (Player player : players) {
+				System.out.println(player);
+				
+				if (!player.isPlaying())
+					continue;
+				playing = true;
+				player.play();
+			}
+		}
+		while (dealer.isPlaying()) {
+			dealer.play();			
+		}
+		System.out.println(dealer);
+	}
 
 	@Override
 	public String toString() {
