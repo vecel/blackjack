@@ -6,6 +6,7 @@ import java.util.List;
 import pl.karandysm.blackjack.deck.Deck;
 import pl.karandysm.blackjack.players.Dealer;
 import pl.karandysm.blackjack.players.Player;
+import pl.karandysm.blackjack.players.PlayerFactory;
 
 public class Game {
 	
@@ -19,8 +20,8 @@ public class Game {
 		players = new ArrayList<>();
 	}
 	
-	public void addPlayer(Player player) {
-		players.add(player);
+	public void addPlayer(PlayerFactory playerFactory) {
+		players.add(playerFactory.createPlayer(deck));
 	}
 	
 	public void init() {
