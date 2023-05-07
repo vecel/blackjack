@@ -21,7 +21,7 @@ public class Player extends AbstractPlayer {
 		hit();
 		hit();
 	}
-
+	
 	private void doubleDown() {
 		
 	}

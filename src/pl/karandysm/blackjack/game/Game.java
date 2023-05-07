@@ -19,7 +19,7 @@ public class Game {
 		players = new ArrayList<>();
 	}
 	
-	public void addPalyer(Player player) {
+	public void addPlayer(Player player) {
 		players.add(player);
 	}
 	
