@@ -1,16 +1,15 @@
 package pl.karandysm.blackjack.players;
 
-import pl.karandysm.blackjack.deck.Deck;
+import pl.karandysm.blackjack.deck.CardDrawable;
 
 public class Player extends AbstractPlayer {
 
 	// dodac zetony
 	
 	
-	public Player(Deck deck) {
+	public Player(CardDrawable deck) {
 		super(deck);
 	}
-	
 
 	@Override
 	public void play() {
@@ -22,7 +21,6 @@ public class Player extends AbstractPlayer {
 		hit();
 		hit();
 	}
-
 
 	private void doubleDown() {
 		

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
-public class Deck {
+public class Deck implements CardDrawable {
 
 	private Stack<Card> deck = new Stack<>();
 	private List<Card> facedUpCards = new ArrayList<>();
@@ -19,6 +19,7 @@ public class Deck {
 		return deck.size();
 	}
 	
+	@Override
 	public Card drawCard(boolean visible) {
 		Card card = deck.pop();
 		if (visible)
@@ -30,6 +31,7 @@ public class Deck {
 		Collections.shuffle(deck);
 	}
 	
+	@Override
 	public List<Card> getFacedUpCards() {
 		return facedUpCards;
 	}

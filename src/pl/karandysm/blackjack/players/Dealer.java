@@ -1,10 +1,10 @@
 package pl.karandysm.blackjack.players;
 
-import pl.karandysm.blackjack.deck.Deck;
+import pl.karandysm.blackjack.deck.CardDrawable;
 
 public class Dealer extends AbstractPlayer {
 	
-	public Dealer(Deck deck) {
+	public Dealer(CardDrawable deck) {
 		super(deck);
 		// TODO Auto-generated constructor stub
 	}

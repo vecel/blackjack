@@ -4,19 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pl.karandysm.blackjack.deck.Card;
-import pl.karandysm.blackjack.deck.Deck;
+import pl.karandysm.blackjack.deck.CardDrawable;
 
 public abstract class AbstractPlayer {
 	
 	private List<Card> hand = new ArrayList<>();
-	private Deck deck;
+	private CardDrawable deck;
 	private boolean playing = true;
 	
-	public AbstractPlayer(Deck deck) {
+	public AbstractPlayer(CardDrawable deck) {
 		this.deck = deck;
 	}
 	
-	// tu gracz decyduje co robic
 	public abstract void play();
 	
 	public abstract void init();
